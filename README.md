@@ -19,9 +19,10 @@ Changes stay in the browser tab only; reloading resets the demo data. "Today" is
 
 | Width | Layout |
 |---|---|
-| > 1280px | Full desktop: sidebar, 4-column pipeline, deadlines beside the calendar |
-| ≤ 1280px | Deadlines and calendar stack |
-| ≤ 1100px | 2-column pipeline; project details become one column |
+| > 1360px | Full desktop: sidebar, 4-column pipeline, deadlines beside the calendar |
+| ≤ 1360px | Deadlines and calendar stack |
+| ≤ 1200px | 2-column pipeline |
+| ≤ 1100px | Project details become one column |
 | ≤ 900px | Sidebar becomes a slide-in drawer (☰) |
 | ≤ 640px | Phone: swipeable pipeline columns, stacked cards, full-screen form |
 
@@ -35,4 +36,6 @@ npx serve .
 
 ## Deploy (GitHub Pages)
 
-Repo → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `(root)`.
+Repo → **Settings → Pages** → Source: *GitHub Actions*. Every push to `main` runs `.github/workflows/pages.yml` and publishes the site.
+
+The type and spacing are scaled down from the 1440px Figma frames (about 75–85%), and the content sits in a centered column on a light grey canvas, so it reads well on a laptop screen.
