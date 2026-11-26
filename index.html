@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VGen Dashboard — Responsive Prototype</title>
+  <meta name="description" content="Responsive coded prototype of the VGen commission dashboard redesign by Mingjia Chen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="sidebar__inner">
+        <a class="brand" href="#/" aria-label="VGen Dashboard home">
+          <span class="brand__mark">
+            <span class="brand__icon">
+              <span class="layer" style="inset:12.5% 58.33% 50% 12.5%"><i style="inset:-6.17% -7.52%"><img src="assets/icons/logo-a.svg" alt="" /></i></span>
+              <span class="layer" style="inset:12.5% 12.5% 66.67% 58.33%"><i style="inset:-11.11% -7.52%"><img src="assets/icons/logo-b.svg" alt="" /></i></span>
+              <span class="layer" style="inset:50% 12.5% 12.5% 58.33%"><i style="inset:-6.17% -7.52%"><img src="assets/icons/logo-a.svg" alt="" /></i></span>
+              <span class="layer" style="inset:66.67% 58.33% 12.5% 12.5%"><i style="inset:-11.11% -7.52%"><img src="assets/icons/logo-b.svg" alt="" /></i></span>
+            </span>
+          </span>
+          <span class="brand__text"><span class="brand__name">VGen</span><span class="brand__sub">Dashboard</span></span>
+        </a>
+
+        <button class="btn-new" type="button" data-action="open-new">
+          <img src="assets/icons/plus.svg" alt="" width="26" height="26" />
+          <span>New Commission</span>
+        </button>
+
+        <nav class="nav">
+          <div class="nav__group">
+            <p class="nav__label">Personal</p>
+            <a class="nav__item is-active" href="#/"><img src="assets/icons/nav-dashboard.svg" alt="" width="16" height="16" />Dashboard</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-portfolio.svg" alt="" width="16" height="16" />Portfolio</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-wallet.svg" alt="" width="16" height="16" />Wallet</a>
+          </div>
+          <div class="nav__group">
+            <p class="nav__label">Commissions</p>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-commissions.svg" alt="" width="16" height="16" />Commissions</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-services.svg" alt="" width="16" height="16" />Services</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-workflows.svg" alt="" width="16" height="16" />Workflows</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-layers.svg" alt="" width="16" height="16" />Forms</a>
+          </div>
+          <div class="nav__group">
+            <p class="nav__label">Shop</p>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-orders.svg" alt="" width="16" height="16" />Orders</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-products.svg" alt="" width="16" height="16" />Products</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-layers.svg" alt="" width="16" height="16" />Bundles</a>
+          </div>
+          <div class="nav__group">
+            <p class="nav__label">Analytics</p>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-reports.svg" alt="" width="16" height="16" />Reports</a>
+            <a class="nav__item" href="#/" data-soon><img src="assets/icons/nav-settings.svg" alt="" width="16" height="16" />Settings</a>
+          </div>
+        </nav>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" data-action="close-nav" hidden></div>
+
+    <!-- Main column -->
+    <div class="column">
+      <header class="topbar">
+        <button class="icon-btn topbar__menu" type="button" data-action="toggle-nav" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <label class="search">
+          <img src="assets/icons/search.svg" alt="" width="16" height="16" />
+          <input type="search" id="search" placeholder="Search commissions, clients..." autocomplete="off" />
+        </label>
+
+        <div class="version-switch" role="group" aria-label="Prototype version">
+          <a href="#/" class="version-switch__opt" data-version="laptop">
+            <svg viewBox="0 0 20 16" width="18" height="14" aria-hidden="true"><rect x="3" y="1.5" width="14" height="9.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1 14h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Laptop</span>
+          </a>
+          <a href="#/mobile" class="version-switch__opt" data-version="mobile">
+            <svg viewBox="0 0 12 18" width="11" height="16" aria-hidden="true"><rect x="1" y="1" width="10" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 14h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Mobile</span>
+          </a>
+        </div>
+
+        <div class="topbar__actions">
+          <button class="icon-btn" type="button" aria-label="Notifications" data-action="notifications">
+            <img src="assets/icons/bell.svg" alt="" width="26" height="27" />
+          </button>
+          <span class="topbar__divider" aria-hidden="true"></span>
+          <button class="btn-profile" type="button" data-action="profile">
+            <img src="assets/icons/profile.svg" alt="" width="29" height="29" />
+            <span>Profile</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main" id="main" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <!-- New commission dialog -->
+  <dialog class="modal" id="new-dialog" aria-labelledby="new-title"></dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
